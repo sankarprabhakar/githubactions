@@ -25,4 +25,14 @@
     * Marketplace: Place where you can purchase reusable actions.
     * Name : Name of the workflow. It appears in left pane.
 
-    
+# Scheduled workflow trigger:
+
+### Cron String understanding
+    *   Cron string explanation "*(minutes) *(hour) *(Day) *(Month) *(Day of week) "
+    *   Asterisk (*): Matches every value of the field.
+        Comma (,): Separates multiple values.
+        Hyphen (-): Specifies a range of values.
+        Slash (/): Specifies increments of values.
+        L: Last day of the month or last weekday (e.g., L in the day of the month field or 5L for the last Friday).
+        W: Nearest weekday (e.g., 15W means the nearest weekday to the 15th of the month).
+        #: Specifies the nth occurrence of a day of the week (e.g., 3#2 for the second Wednesday of the month).
