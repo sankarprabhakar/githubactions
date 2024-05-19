@@ -9,7 +9,7 @@ jobs:
     runs-on:ubuntu-latest:
     steps:
       - name: Group logging
-        run: |
+        runs: |
         echo "::group:: My group - 1"
         echo "Msg-1"
         echo "Msg-2"
