@@ -25,7 +25,7 @@
     * Marketplace: Place where you can purchase reusable actions.
     * Name : Name of the workflow. It appears in left pane.
 
-# Scheduled workflow trigger:
+## Scheduled workflow trigger:
 
 ### Cron String understanding
     *   Cron string explanation "*(minutes) *(hour) *(Day) *(Month) *(Day of week) "
@@ -36,3 +36,39 @@
         L: Last day of the month or last weekday (e.g., L in the day of the month field or 5L for the last Friday).
         W: Nearest weekday (e.g., 15W means the nearest weekday to the 15th of the month).
         #: Specifies the nth occurrence of a day of the week (e.g., 3#2 for the second Wednesday of the month).
+
+## Muliple events:
+    *   multi event can be configured in the "on" part of workflow.
+    *   If more than one event occurs at same time, it will trigger multiple parallel runs.
+    Eg: 
+    ```
+    name: Multi event
+    on:
+        push:
+            branches:
+                - main
+        pull_request:
+            branches:
+                - main
+    jobs:
+        build-on:
+            runs-on: ubuntu-latest
+            steps:
+                -name: Setup Env
+                 run: echo "This is setup eng
+    ```
+
+## Manual Trigger
+    *   Triggered manually from UI or REST API or CLI
+    *   Event ```workflow_dispatch``` as the work flow trigger
+    *   ```workflow_dispatch``` can take input parameters.
+    *   ```gh workflow run yml_name.yml -f input -f input -f input```
+    *   For triggering from Rest API, a github token need to be generated and set in GITHUB_TOKEN   
+        env
+
+## Webhooks
+
+
+
+
+
