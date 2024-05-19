@@ -73,6 +73,7 @@
         to trigger workflow. Access to APIs need authentication.
     *   To trigger a workflow from external sources, the workflow need to have a    
         'repository_dispatch" event of type "webhook".
+    *   Can be triggered by '''curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token PAT" -d '{"event_type":"webhook", "client_payload": {"Key":"Value"}}' https://api.github.com/repos/sankarprabhakar/githubactions/dispatches''' via curl.
 
 
 
