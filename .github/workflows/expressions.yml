@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check contains
-        if: contains("Hello world","Hell")
+        if: contains('Hello world','Hell')
         run: echo "String contains Hello"
       - name: Check starts with
-        if: startswith("Hello world","Hell")
+        if: startswith('Hello world','Hell')
         run: echo "String starts with Hell"
       - name: Check ends with
-        if: startswith("Hello world","orld")
+        if: startswith('Hello world','orld')
         run: echo "String ends with orld"
       - name: Format
         run: echo "${{ format('Hello {0} {1}','Karthik', 'Krithika') }}"
