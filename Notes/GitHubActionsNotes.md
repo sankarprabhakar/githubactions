@@ -65,8 +65,14 @@
     *   ```gh workflow run yml_name.yml -f input -f input -f input```
     *   For triggering from Rest API, a github token need to be generated and set in GITHUB_TOKEN   
         env
+    * Trigger from GH : gh workflow run manual_trigger.yml -f greetings=Hello -f nameofperson=Karthik
+
 
 ## Webhooks
+    *   Webhooks are public facing  HTTP APIs to which request can be send to generate event 
+        to trigger workflow. Access to APIs need authentication.
+    *   To trigger a workflow from external sources, the workflow need to have a    
+        'repository_dispatch" event of type "webhook".
 
 
 
