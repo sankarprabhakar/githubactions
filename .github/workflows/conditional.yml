@@ -4,7 +4,7 @@ on:
 jobs:
   hello-job:
     if: github.repository == 'hello'
-    runs-on: ubuntu-latest:
+    runs-on: ubuntu-latest
     steps:
       - name: Hello job
         run : echo 'Hello'
