@@ -11,10 +11,14 @@ jobs:
         if: startswith('Hello world','Hell')
         run: echo "String starts with Hell"
       - name: Check ends with
-        if: startswith('Hello world','orld')
+        if: endswith('Hello world','orld')
         run: echo "String ends with orld"
       - name: Format
         run: echo "${{ format('Hello {0} {1}','Karthik', 'Krithika') }}"
+      - name: Convert job context to json
+        run : "echo \"Job context to json ${{ toJSON(github.job) }}\""
+      - name: Parsed json
+        run: "echo \"Parsed JSON ${{ fronJSON('{\"hello\":\"World\"}').hello}}\""
       - name: Success
         if: ${{success()}}
         run: echo "Job ran success"
