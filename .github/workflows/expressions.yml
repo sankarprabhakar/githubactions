@@ -3,7 +3,7 @@ on: push
 jobs:
   check-expressions:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - name: Check contains
         if: contains("Hello world","Hell")
         run: echo "String contains Hello"
