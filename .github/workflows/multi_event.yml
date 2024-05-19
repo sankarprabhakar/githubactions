@@ -11,9 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: "Multi trigger info"
-       run: |
-        echo "REF : $GITHUB_REF"
-        echo "Job id : $GITHUB_JOB"
-        echo "Action : $GITHUB_ACTION"
-        echo "Actor : $GITHUB_ACTOR"
+      - name: "Multi trigger info"
+        run: |
+          echo "REF : $GITHUB_REF"
+          echo "Job id : $GITHUB_JOB"
+          echo "Action : $GITHUB_ACTION"
+          echo "Actor : $GITHUB_ACTOR"
