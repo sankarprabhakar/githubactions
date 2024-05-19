@@ -18,7 +18,7 @@ jobs:
       - name: Convert job context to json
         run : "echo \"Job context to json ${{ toJSON(github.job) }}\""
       - name: Parsed json
-        run: "echo \"Parsed JSON ${{ fronJSON('{\"hello\":\"World\"}').hello}}\""
+        run: "echo \"Parsed JSON ${{ fromJSON('{\"hello\":\"World\"}').hello}}\""
       - name: Success
         if: ${{success()}}
         run: echo "Job ran success"
