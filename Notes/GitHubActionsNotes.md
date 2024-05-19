@@ -76,6 +76,12 @@
     *   Can be triggered by '''curl -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token PAT" -d '{"event_type":"webhook", "client_payload": {"Key":"Value"}}' https://api.github.com/repos/sankarprabhakar/githubactions/dispatches''' via curl.
 
 
+## Conditional keyword for steps:
+    *   jobs.<job id>.if can be used to stop a step from execution unless the condition is met.
+    *   eg: if: github.repo == <xyz>
+                <run statement>
 
+
+## Expressions:
 
 
