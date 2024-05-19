@@ -97,5 +97,25 @@
         * failure
         * cancelled
         * always
-## 
+## Runners:
+    * GitHub hosted
+    * Self hosted
+    * runner is specified in runs-on:
+      Eg:
+      '''
+      runs-on: ubuntu-latest
+      runs-on: windows-latest
+      runs-on: macos-latest
 
+      runs-on: [ubuntu-latest,windows-latest,macos-latest] # runs on any of the runner
+
+      runs-on: [self-hosted]
+      '''
+    * To make a self-hoster runner we need to add github action runner in the machine. 
+
+
+## Workflow commands
+    Actions can
+    * Communicate with runner to set environment variable
+    * output values used by another job or actions
+    
