@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Group logging
         runs: |
-        echo "::group:: My group - 1"
-        echo "Msg-1"
-        echo "Msg-2"
-        echo "::endgroup::My group -2"
+          echo "::group:: My group - 1"
+          echo "Msg-1"
+          echo "Msg-2"
+          echo "::endgroup::My group -2"
