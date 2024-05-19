@@ -123,4 +123,21 @@
     * Group log messaging  ::group:: & ::endgroup::
     * Masking values in logs ::add-mask::
     * Stop and fail an action using ::error::
+
+## Workflow context
+    * Context are way to access the workflow runs, variables, runner enviornment, jobs, steps.
+    * Each context is an object containing string or other objects.
+    * You can access the context via $ {{ context }}
+    * Some of the available contexts
+        * github
+        * env 
+        * vars :: 
+        * jobs:
+        * steps:
+        * Runner
+        * secrets
+        * stragegy
+        * matrix
+        * needs
+        * inputs
     
