@@ -83,5 +83,19 @@
 
 
 ## Expressions:
-
+    * Functions:
+        * contains(SearchString, Value)
+        * startswith(searchstring,searchValue)
+        * endswith(searchstring,searchvalue)
+        * format(string,val, val2 ) -- Eg: format("Hello world {0} {1}", "Sankar", "WDC")
+        * join(array, separator) -> to join the items in array
+        * tojson(value)
+        * fromjson(value)
+        * hashFiles()
+    * Status check functions
+        * success
+        * failure
+        * cancelled
+        * always
+## 
 

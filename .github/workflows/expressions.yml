@@ -1,0 +1,24 @@
+name: Expression example
+on: push
+jobs:
+  check-expressions:
+    runs-on: ubuntu-latest
+    step:
+      - name: Check contains
+        if: contains("Hello world","Hell")
+        run: echo "String contains Hello"
+      - name: Check starts with
+        if: startswith("Hello world","Hell")
+        run: echo "String starts with Hell"
+      - name: Check ends with
+        if: startswith("Hello world","orld")
+        run: echo "String ends with orld"
+      - name: Format
+        run: echo ${{format("Hello {0} {1}","Karthik", "Krithika")}}
+      - name: Success
+        if: ${{success()}}
+        run: echo "Job ran success"
+      - name: Success
+        if: ${{failure()}}
+        run: echo "Job ran success"
+      
