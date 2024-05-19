@@ -1,0 +1,28 @@
+name: Manual Trigger
+on:
+  workflow_dispatch:
+    inputs:
+      greetings:
+        description: Greeting String
+        type: Choice
+        options:
+        - Good morning
+        - Good evening
+        required: true
+        default: Good morning
+      nameofperson:
+        description: Name of person
+        type: String
+        required: true
+        default : Github user
+
+jobs:
+  wisher:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wishing job
+        run: | 
+          echo "Mr. $USER, $GREET"
+        env:
+          USER: ${{inputs.nameofperson}}
+          GREET: ${{inputs.greetings}}
