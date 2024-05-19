@@ -2,7 +2,7 @@ name: Webhook trigger
 on:
   repository_dispatch:
     types:
-      - custom_webhook
+      - webhook
 
 jobs:
   repository-web-hooks:
