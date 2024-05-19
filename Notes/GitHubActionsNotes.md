@@ -116,6 +116,11 @@
 
 ## Workflow commands
     Actions can
-    * Communicate with runner to set environment variable
-    * output values used by another job or actions
+    * Communicate with runner to set environment variable : Set something to env variable
+    * output values that used by another job or actions 
+    * Adding to system path
+    * Output debug message ::debug::
+    * Group log messaging  ::group:: & ::endgroup::
+    * Masking values in logs ::add-mask::
+    * Stop and fail an action using ::error::
     
