@@ -146,3 +146,55 @@
     *   Jobs can run in parallel, but we can make it sequency be defining dependency
         * jobs.jobid.needs
         * job.jobid.if
+
+
+## Encrypted scret:
+    * Encrypted screts are variables that you passes to the GitHub workflow
+    * Accessed via ${{secret.MY_SECRET}}
+    * Different levels of secrets:
+        * Org
+        * Repo
+        * Environment
+    * We can set secret from gh cli
+        *   gh secret set SECRET_NAME - value need to be entered in prompt)
+        *   gh secret --env ENV_SECRET_NAME
+
+        *   gh secret --org ORG_SECRET_NAME ( gh auth login --scopes:"admin:org")
+## Configuration Variables:
+    * Vars are used to pass non-sensitive information to github workflows
+    * Different level
+        * Org
+        * Repo
+        * env
+    * Can be set using gh command line
+
+## Default env vars:
+    * Variables that are set by Github, and that can be used in github workflows.
+    * Eg: GITHUB_ACTIONS
+## setting custom envars
+    * Env can be set at 3 levels
+        * workflow level
+        * Job level
+        * step level
+    * Can be accessed  via env varibale for using it in if statements.
+    * GitHub also allows us to set the env dynamically by using GITHUB_ENV variable.
+
+## GITHUB_TOKEN
+    * GitHub Creates a token at start of every workflow. This token can be used in the workflow for authorizations.
+## Add script to workflow
+    * Bash or power shell scripts can be executed from github actions
+    * At job level, workspace path can be set and any scripts present there can be invoked
+      ``` 
+      jobs:
+        job-name:
+            runs-on: ubuntu-latest
+            defaults:
+                run:
+                    working-directory: Scripts
+            steps:
+                - name: name
+                  run : ./test.sh
+      ```
+
+## Publish github package using a workflow
+    
