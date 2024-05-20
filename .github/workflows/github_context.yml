@@ -12,5 +12,7 @@ jobs:
       - name: My step 1
         run: |
           echo "value of action = $MY_ACTION"
+          echo "Value of actor = $MY_ACTOR"
         env:
           MY_ACTION : ${{github.action}}
+          MY_ACTOR  : ${{github.actor}}
