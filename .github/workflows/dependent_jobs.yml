@@ -1,0 +1,17 @@
+name: Dependent jobs
+on:
+  push:
+    branhces:
+      - main
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: echo "Hello job 1"
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+      - name: Step 1
+        run: echo "Hello job 2"
+

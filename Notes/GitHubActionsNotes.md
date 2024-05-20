@@ -141,3 +141,8 @@
         * needs
         * inputs
     
+## Dependent jobs:
+    *   Workflow run is made of one or more jobs.
+    *   Jobs can run in parallel, but we can make it sequency be defining dependency
+        * jobs.jobid.needs
+        * job.jobid.if
