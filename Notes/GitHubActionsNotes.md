@@ -302,7 +302,20 @@
 ## Actions Versions:
     * Version for action is specified by @<version number>
     * @<version number > is the TAG in main branch.
-    
 
+## Files and Directories for JS Action
+    * repo need to named as name-of-action
+    * action.yml --> defines input,output and main entry
+## Files and Directories for docker action
+    * repo name is name-of-doctor action
+    * contains Dockerfile
+    * action.yml --> input,output & main entry point
+## Exit code for github action
+    * exit code can be set from yml batch execution
 
+## Reuse templates for Actions and Workflows 
+    * Templates have the yml and meta data file
+    * Saved in .github/workflow
 
+## Custom github action
+    * 
