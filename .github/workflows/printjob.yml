@@ -1,0 +1,15 @@
+name: printjob
+
+on:
+  workflow_call:
+    inputs:
+      node:
+        type: string
+        required: true
+
+jobs:
+  just-print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print job
+        run: echo "Value of input is ${{inputs.node}}"

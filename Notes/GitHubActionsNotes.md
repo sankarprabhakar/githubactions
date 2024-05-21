@@ -197,4 +197,91 @@
       ```
 
 ## Publish github package using a workflow
+    * github can build and publish packages
+    * Below actions to be used
+        * docker/login-action
+        * docker/meta-data-action
+        * docker/build-push-action
+
+## Publish docker hub registry using workflow
+    * same as publish to github package build and publish
+    * Docker credential to be be used
+
+## Publish github container registry using workflow
+    * Below are the actions to be used
+        * docker/login-action
+        * docker/meta-data-action
+        * docker/build-push-action
+## Publish component as github release
+    * actions/create-release
+    * actions/upload-release-assets
+## Deploy release to cloud provide
+    * Azure
+    * Google kubernetes engine
+    * ECS
+    * azure/static-web-apps-deploy
+
+## Service Containers
+    * Service containers are docker containers that provide simple and portable way for you to host services that may be need to test and operation your application in the workflow.
+    * Service container can be configured for each workflow.
+    * Github creates docker contained that are configured in the workflow and delets it when job completed
+    * Each step can communicae wiht service contained configured in the workflow
+    * composite action cannot use docker container.
+    * if job used docker contained, job contained, service container then runner must be linux one.
+    * Workflow can be configured to run on runner or docker container.
+    ```
+    name: redis container example
+    on: push
+    jobs:
+        container-job:
+        runs-on: ubuntu-later
+        container: node-16: bullseye
+        services:
+            redis:
+                image:redis
+    ```
+    * Serice container in host mode
+     ```
+    name: redis container example
+    on: push
+    jobs:
+        runner-job:
+        runs-on: ubuntu-later
+        services:
+            redis:
+                image:redis
+                host: 45545:45546
+    ```
+## Routing workflow to a runner
+    * Self hosted runner can be added with specific labels.
+    * Mulitple labels are possible to denote note capability - like linux, centos, x64, etc.
+    * Runner matching all the criteria specified in runs-on criteria will be picked ( cumulative)
+    * Enterprise accounts can group the runners.
+## Code-QL:
+    * CodeQL : Helps to analyzer code and fix security issues
+    * github/codeql-action/init 
+    * github/codeql-action/analyze
+
+## Caching package and dependencies
+    * To make workflow run faster we can cache file in the workflows.
+    * workflow uses the same artifacts in every runs . Caching makes the execution faster.
+    * eg:
+    ``` uses : setup-ruby@v1
+        bundler-cache: yes
+    ```
+## Caching Job dependencies and Build outputs
+    * Caching build dependencies and build output makes the workflow faster.
+    * actions/cache@V1
+    * above actions outputs cache hit or miss
+## Remove workflow artifacts from github
+    * From UI
+## Workflow status badge
+    * Displaying status of workflow in repo
+    * This is achieved by placing special url in the Readme file
+## ENV protections
+    * You can configure env with protection rules in a runner
+    ``` environment : production ```
+## Job matrix configuration
+    * single job configure to take create multiple jobs.
     
+

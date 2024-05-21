@@ -1,0 +1,14 @@
+name: matrix
+
+on:
+  workflow_dispatch
+
+jobs:
+  matrix-jobs:
+  strategy:
+    matrix:
+      nodeversions: [10, 12]
+  - name: matix job
+    uses: ./gihub/workflows/printjob.yml
+    with:
+      node: ${{matrix.nodeversions}}
