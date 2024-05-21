@@ -8,6 +8,8 @@ jobs:
     strategy:
       matrix:
         nodeversions: [10, 12]
+        subversion  : [1,2,3]
     uses: ./.github/workflows/printjob.yml
     with:
       node: ${{matrix.nodeversions}}
+      sub:  ${{matrix.subversion}}

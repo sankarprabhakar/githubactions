@@ -6,6 +6,9 @@ on:
       node:
         type: string
         required: true
+      sub:
+        type: string
+        required: true
 
 jobs:
   just-print:
