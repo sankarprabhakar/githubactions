@@ -8,7 +8,6 @@ jobs:
     strategy:
       matrix:
         nodeversions: [10, 12]
-    - name: matix job
-      uses: ./gihub/workflows/printjob.yml
-      with:
-        node: ${{matrix.nodeversions}}
+    uses: ./gihub/workflows/printjob.yml
+    with:
+      node: ${{matrix.nodeversions}}
