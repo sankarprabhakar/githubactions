@@ -8,6 +8,6 @@ jobs:
     strategy:
       matrix:
         nodeversions: [10, 12]
-    uses: ./printjob.yml@HEAD
+    uses: .github/workflows/printjob.yml@HEAD
     with:
       node: ${{matrix.nodeversions}}
