@@ -5,10 +5,10 @@ on:
 
 jobs:
   matrix-jobs:
-  strategy:
-    matrix:
-      nodeversions: [10, 12]
-  - name: matix job
-    uses: ./gihub/workflows/printjob.yml
-    with:
-      node: ${{matrix.nodeversions}}
+    strategy:
+      matrix:
+        nodeversions: [10, 12]
+    - name: matix job
+      uses: ./gihub/workflows/printjob.yml
+      with:
+        node: ${{matrix.nodeversions}}
