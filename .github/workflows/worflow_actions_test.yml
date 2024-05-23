@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Trigger action
         id: hello
-        uses: ./.github/actions/actions_greeting.yml
+        uses: ./.github/greet_action
         with:
           name: ${{inputs.name}}
       - name: test-echo
