@@ -1,0 +1,17 @@
+name: JS Action example
+description: This is a JS test action
+
+inputs:
+  name:
+    description: Name of the person
+    default: Sankar
+    type: String
+    required: true
+
+outputs:
+  greeting:
+    description: Name with greeting
+
+runs:
+  using: 'node20'
+  main: 'index.js'
