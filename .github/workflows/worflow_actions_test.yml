@@ -1,12 +1,13 @@
 name: Actions
-description: Checks the custom JS action 
-on: workflow_dispatch
+description: Checks the custom JS action
 
-inputs:
-  name:
-    description: Enter the name
-    required: true
-    default: ABC
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Enter the name
+        required: true
+        default: ABC
 
 jobs:
   greeting-job:
