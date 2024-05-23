@@ -21,7 +21,8 @@ jobs:
         with:
           name: ${{inputs.name}}
       - name: test-echo
-        run: echo "Name given as input is ${{inputs.name}}"
-        run: echo "Name with greet is ${{steps.hello.outputs.name}}"
+        run: |
+        echo "Name given as input is ${{inputs.name}}"
+        echo "Name with greet is ${{steps.hello.outputs.name}}"
 
 
