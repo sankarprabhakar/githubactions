@@ -2,7 +2,7 @@ name: JS Action example
 description: This is a JS test action
 
 inputs:
-  name:
+  greet-name:
     description: Name of the person
     default: Sankar
     type: String
