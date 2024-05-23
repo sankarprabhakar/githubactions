@@ -1,5 +1,5 @@
 name: Actions
-description: Checks the custom JS action
+#description: 'Checks the custom JS action'
 
 on:
   workflow_dispatch:
