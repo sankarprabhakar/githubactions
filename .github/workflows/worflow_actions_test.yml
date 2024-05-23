@@ -4,7 +4,7 @@ name: Actions
 on:
   workflow_dispatch:
     inputs:
-      name:
+      greet-name:
         description: Enter the name
         required: true
         default: ABC
@@ -19,7 +19,7 @@ jobs:
         id: hello
         uses: ./.github/greet_action
         with:
-          name: ${{inputs.name}}
+          greet-name: ${{inputs.greet-name}}
       - name: test-echo
         run: |
           echo "Name given as input is ${{inputs.name}}"
