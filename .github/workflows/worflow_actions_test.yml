@@ -22,7 +22,7 @@ jobs:
           name: ${{inputs.name}}
       - name: test-echo
         run: |
-        echo "Name given as input is ${{inputs.name}}"
-        echo "Name with greet is ${{steps.hello.outputs.name}}"
+          echo "Name given as input is ${{inputs.name}}"
+          echo "Name with greet is ${{steps.hello.outputs.name}}"
 
 
