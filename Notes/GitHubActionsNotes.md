@@ -318,4 +318,8 @@
     * Saved in .github/workflow
 
 ## Custom github action
-    * 
+    * Three types
+        * JS actions  : Faster than Container. Action code is sepearted from the environemnt
+        * Container actions - Only runs on linux - Action code and environment is bundled
+        * Composite actions - Combining multiple runs into one action.
+        
